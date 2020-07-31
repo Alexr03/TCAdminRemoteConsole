@@ -87,6 +87,9 @@ namespace TCAdminRemoteConsole.Controllers
             if (savedScript != null)
             {
                 terminalScript = savedScript;
+                terminalScript.Name = name;
+                terminalScript.Contents = model.Script;
+                terminalScript.TerminalType = model.TerminalType;
             }
             else
             {
