@@ -196,6 +196,7 @@
       <Content Include="install.sql" />
       <Content Include="Module.json" />
       <Content Include="uninstall.sql" />
+      <Content Include="Views\Shared\Main.Plugin.RemoteConsole.css" />
       <Content Include="Views\TCAdminRemoteConsole.Controllers\RemoteConsole\Index.cshtml" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
