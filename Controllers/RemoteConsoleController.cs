@@ -66,8 +66,8 @@ namespace TCAdminRemoteConsole.Controllers
                         return JsonMessage("Windows is not supported with this terminal.", HttpStatusCode.BadRequest);
                     }
 
-                    tempFileName = Path.Combine(server.ServerUtilitiesService.GetTemporaryDirectory(),
-                        Path.GetTempFileName());
+                    tempFileName = TCAdmin.SDK.Misc.FileSystem.CombinePath(server.ServerUtilitiesService.GetTemporaryDirectory(),
+                        "rConsole.sh", server.OperatingSystem);
                     // fileSystem.CreateTemporaryFile(tempFileName, model.Script);
                     fileSystem.CreateTextFile(tempFileName, Encoding.ASCII.GetBytes(model.Script));
                     remoteConsole = new RemoteConsole(server, "./" + tempFileName, $"", "Shell", true);
