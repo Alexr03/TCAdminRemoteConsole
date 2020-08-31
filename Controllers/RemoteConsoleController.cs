@@ -46,7 +46,7 @@ namespace TCAdminRemoteConsole.Controllers
                     // fileSystem.CreateTemporaryFile(tempFileName, model.Script);
                     fileSystem.CreateTextFile(tempFileName, Encoding.ASCII.GetBytes(model.Script));
                     remoteConsole = new RemoteConsole(server, "C:\\Windows\\System32\\cmd.exe",
-                        $"/c powershell \"{tempFileName}\"", "Powershell", true);
+                        $"/c powershell \"{tempFileName}\"", "Powershell", false);
                     break;
                 case TerminalType.CommandPrompt:
                     if (server.OperatingSystem != OperatingSystem.Windows)
