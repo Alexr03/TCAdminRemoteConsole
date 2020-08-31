@@ -70,7 +70,7 @@ namespace TCAdminRemoteConsole.Controllers
                         "rConsole.sh", server.OperatingSystem);
                     // fileSystem.CreateTemporaryFile(tempFileName, model.Script);
                     fileSystem.CreateTextFile(tempFileName, Encoding.ASCII.GetBytes(model.Script));
-                    remoteConsole = new RemoteConsole(server, "/bin/sh", tempFileName, "Shell", true);
+                    remoteConsole = new RemoteConsole(server, "/bin/sh", tempFileName, "Shell", false);
                     break;
             }
 
